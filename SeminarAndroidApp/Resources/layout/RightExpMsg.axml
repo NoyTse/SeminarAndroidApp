@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="6dp"
+    android:clipToPadding="false">
+    <com.ms.square.android.expandabletextview.ExpandableTextView
+        android:id="@+id/expand_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:elevation="2dp"
+        android:background="@drawable/RightMsgBackgroundColor"
+        app:maxCollapsedLines="3"
+        app:animDuration="200">
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TextView
+                android:id="@id/expandable_text"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:maxWidth="180dp"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="10dp"
+                android:fontFamily="sans-serif-light"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+            <ImageView
+                android:visibility="visible"
+                android:src="@drawable/ic_screenshot"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/imgThumbScreenshot"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_toRightOf="@id/expandable_text" />
+        </RelativeLayout>
+        <ImageButton
+            android:id="@id/expand_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            android:paddingBottom="13dp"
+            android:layout_marginTop="3dp"
+            android:layout_gravity="right|bottom"
+            android:background="@android:color/transparent" />
+    </com.ms.square.android.expandabletextview.ExpandableTextView>
+</RelativeLayout>

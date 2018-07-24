@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TitleBar"
+        android:background="#80d4ff"
+        android:padding="5dp"
+        android:weightSum="100"
+        android:elevation="3dp">
+        <TextView
+            android:text="Lesson Name"
+            android:layout_weight="90"
+            android:id="@+id/lblLessonName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:textSize="24sp" />
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:id="@+id/btnBack" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@drawable/sendBtnUI"
+            android:id="@+id/btnSend"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"
+            android:layout_alignParentRight="true" />
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:hint="Enter text..."
+            android:id="@+id/txtInputMsg"
+            android:textColorHint="#cccccc"
+            android:textColor="#000000"
+            android:layout_toStartOf="@id/btnSend" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/divider"
+        android:layout_above="@id/inputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true"
+        android:background="#f4ede6"
+        android:divider="@android:color/transparent"
+        android:layout_above="@id/divider"
+        android:layout_below="@id/TitleBar" />
+</RelativeLayout>
